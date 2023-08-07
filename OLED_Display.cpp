@@ -11,6 +11,7 @@
 #include "OLED_Display.h"
 #include "KeyData.h"
 
+void Key_Interface(int LayerNumber);
 
 USBHIDConsumerControl ConsumerControl;
 USBHIDMouse Mouse;
@@ -61,7 +62,11 @@ int OLED_Display::OLED_MainView(char* ViewName, int LayerNumber, char (*LayerNam
   display.drawLine(0, 30, 20, 30, SSD1306_WHITE);
   display.drawLine(20, 30, 30, 9, SSD1306_WHITE);
 
-  display.setCursor(30, 18);  // Start at top-left corner
+  display.drawLine(25, 21, 128, 21, SSD1306_WHITE);
+
+  display.setCursor(35, 12);  // Start at top-left corner
+  display.println("Layey_Name");
+  display.setCursor(28, 23);  // Start at top-left corner
   display.println(LayerName[LayerNumber]);
 
   display.setTextSize(2);               // Normal 1:1 pixel scale
@@ -85,26 +90,8 @@ int OLED_Display::OLED_MainView(char* ViewName, int LayerNumber, char (*LayerNam
       if (millis() - timer >= 1000) return 2;
     }
 
-    if (key_listner.Get_Button_1() == true) {
-      ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
-      Serial.println(key_data1.Get_KeyData(LayerNumber).Button_1);
-      ConsumerControl.release();
-      delay(1000);
-    }
+    Key_Interface(LayerNumber);
 
-    if (key_listner.Get_Button_2() == true) {
-      ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
-      Serial.println(key_data1.Get_KeyData(LayerNumber).Button_2);
-      ConsumerControl.release();
-      delay(1000);
-    }
-
-    if (key_listner.Get_Button_3() == true) {
-      ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
-      Serial.println(key_data1.Get_KeyData(LayerNumber).Button_3);
-      ConsumerControl.release();
-      delay(1000);
-    }
 
     key_listner.PinReset();  //입력 인터페이스 값 초기화
     display.display();
@@ -370,5 +357,206 @@ char* OLED_Display::OLED_TextEditView() {
 
     key_listner.PinReset();  //입력 인터페이스 값 초기화
     display.display();
+  }
+}
+
+
+void Key_Interface(int LayerNumber) {
+  if (key_listner.Get_Button_1() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_1) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_Button_2() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_2) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_Button_3() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_3) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_Button_4() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_4) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_Button_5() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_5) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_Button_6() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_6) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+
+  //========================================
+
+  if (key_listner.Get_RotaryUp() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryUp) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
+          ConsumerControl.release();
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
+          ConsumerControl.release();
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_RotaryDown() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryDown) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
+          ConsumerControl.release();
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
+          ConsumerControl.release();
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_RotaryPush() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryPush) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
   }
 }

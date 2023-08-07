@@ -43,7 +43,7 @@ void KeyListner::ControllerKeyInit(
 
   Pin_SettingButton = SettingButton;
 
-  pinMode(Pin_Button_1, INPUT_PULLDOWN);
+  pinMode(Pin_Button_1, INPUT);
   pinMode(Pin_Button_2, INPUT);
   pinMode(Pin_Button_3, INPUT);
   pinMode(Pin_Button_4, INPUT);

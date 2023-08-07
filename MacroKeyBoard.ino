@@ -9,16 +9,20 @@ OLED_Display oled_display;
 LayerData layer_data;
 KeyData key_data;
 
-
-char test[10][20] = { "testTEXT", "text", "text", "text", "testTEXThansun", "testTEXT", "text", "text", "text", "testTEXT" };
-
 char LayerName_List[10][20];
 
 //========================================
 int Layer_Number = 0;
 int OLED_SceneNumber = 0;
 
+
 void setup() {
+  key_data.EEPROM_DataInit();
+
+  key_data.EEPROM_DataLoad();
+
+  //   pinMode(LED_BUILTIN, OUTPUT);
+  // digitalWrite(LED_BUILTIN, LOW);
 
   oled_display.OLED_Display_Init();
   Serial.begin(115200);
@@ -53,7 +57,10 @@ void Scene_Main() {
   int get_data = 0;
   get_data = oled_display.OLED_MainView("Home", Layer_Number, LayerName_List);
   if (get_data == 1) OLED_SceneNumber = 1;
-  if (get_data == 2) OLED_SceneNumber = 2;
+  if (get_data == 2) {
+    layer_data = key_data.Get_KeyData(Layer_Number);
+    OLED_SceneNumber = 2;
+  }
 }
 
 void Scene_LayerList() {
@@ -74,6 +81,7 @@ void Scene_LayerList() {
 }
 
 void Scene_SettingMode() {
+
   int get_data = 0;
   unsigned char icon[13][200];
   for (int i = 0; i < 200; i++) {
@@ -98,12 +106,16 @@ void Scene_SettingMode() {
 
   if (get_data == -1) {
     OLED_SceneNumber = 0;
+
     key_data.Set_KeyData(Layer_Number, layer_data);  //데이터 임시저장
     //===================================================layer_data에 있는 데이터 초기화
 
     Serial.println(key_data.Get_KeyData(Layer_Number).Button_1);
 
     strcpy(LayerName_List[Layer_Number], key_data.Get_KeyData(Layer_Number).LayerName);
+
+    key_data.EEPROM_DataSave();
+
   } else if (get_data == 0) {
     Scene_NameSettingView();  //이름 설정
   } else {
@@ -160,84 +172,91 @@ void Scene_NameSettingView() {
 void Scene_MediaDataList(int Key_Number) {
   int get_data = 0;
   get_data = oled_display.OLED_ListView("Setting", Media_display, 0, 8);
+
+  KeyData_Set(Key_Number, get_data, MEDIA);
+}
+void Scene_AppDataList(int Key_Number) {
+  int get_data = 0;
+  get_data = oled_display.OLED_ListView("Setting", App_display, 0, 4);
+
+  KeyData_Set(Key_Number, get_data, APP);
+}
+
+void KeyData_Set(int Key_Number, int get_data, int Type) {
   switch (Key_Number) {
     case 1:
       {
-        layer_data.KeyType_Button_1 = MEDIA;
+        layer_data.KeyType_Button_1 = Type;
         layer_data.Button_1 = get_data;
         break;
       }
     case 2:
       {
-        layer_data.KeyType_Button_2 = MEDIA;
+        layer_data.KeyType_Button_2 = Type;
         layer_data.Button_2 = get_data;
         break;
       }
     case 3:
       {
-        layer_data.KeyType_Button_3 = MEDIA;
+        layer_data.KeyType_Button_3 = Type;
         layer_data.Button_3 = get_data;
         break;
       }
     case 4:
       {
-        layer_data.KeyType_Button_4 = MEDIA;
+        layer_data.KeyType_Button_4 = Type;
         layer_data.Button_4 = get_data;
         break;
       }
     case 5:
       {
-        layer_data.KeyType_Button_5 = MEDIA;
+        layer_data.KeyType_Button_5 = Type;
         layer_data.Button_5 = get_data;
         break;
       }
     case 6:
       {
-        layer_data.KeyType_Button_6 = MEDIA;
+        layer_data.KeyType_Button_6 = Type;
         layer_data.Button_6 = get_data;
         break;
       }
 
     case 7:
       {
-        layer_data.KeyType_RotaryUp = MEDIA;
+        layer_data.KeyType_RotaryUp = Type;
         layer_data.RotaryUp = get_data;
         break;
       }
     case 8:
       {
-        layer_data.KeyType_RotaryDown = MEDIA;
+        layer_data.KeyType_RotaryDown = Type;
         layer_data.RotaryDown = get_data;
         break;
       }
     case 9:
       {
-        layer_data.KeyType_RotaryPush = MEDIA;
+        layer_data.KeyType_RotaryPush = Type;
         layer_data.RotaryPush = get_data;
         break;
       }
 
     case 10:
       {
-        layer_data.KeyType_WheelUp = MEDIA;
+        layer_data.KeyType_WheelUp = Type;
         layer_data.WheelUp = get_data;
         break;
       }
     case 11:
       {
-        layer_data.KeyType_WheelDown = MEDIA;
+        layer_data.KeyType_WheelDown = Type;
         layer_data.WheelDown = get_data;
         break;
       }
     case 12:
       {
-        layer_data.KeyType_WheelPush = MEDIA;
+        layer_data.KeyType_WheelPush = Type;
         layer_data.WheelPush = get_data;
         break;
       }
   }
-}
-void Scene_AppDataList(int Key_Number) {
-  int get_data = 0;
-  get_data = oled_display.OLED_ListView("Setting", App_display, 0, 4);
 }
