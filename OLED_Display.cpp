@@ -29,7 +29,7 @@ KeyListner key_listner;
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void OLED_Display::OLED_Display_Init() {
-  key_listner.ControllerKeyInit(35, 36, 37, 38, 39, 40, 6, 5, 4, 37, 38, 39, 17);
+  key_listner.ControllerKeyInit(35, 36, 37, 38, 39, 40, 6, 5, 4, 10, 11, 12, 17);
 
   USB.begin();
 
@@ -553,6 +553,71 @@ void Key_Interface(int LayerNumber) {
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+    }
+  }
+
+    //========================================
+
+  if (key_listner.Get_WheelUp() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelUp) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
+          ConsumerControl.release();
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
+          ConsumerControl.release();
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_WheelDown() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelDown) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
+          ConsumerControl.release();
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
+          ConsumerControl.release();
+          break;
+        }
+    }
+  }
+  if (key_listner.Get_WheelPush() == true) {
+    switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelPush) {
+      case KEYBOARD:
+        {
+          break;
+        }
+      case APP:
+        {
+          ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
+          ConsumerControl.release();
+          delay(300);
+          break;
+        }
+      case MEDIA:
+        {
+          ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           ConsumerControl.release();
           delay(300);
           break;
