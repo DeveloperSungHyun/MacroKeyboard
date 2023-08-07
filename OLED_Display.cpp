@@ -101,8 +101,13 @@ int OLED_Display::OLED_MainView(char* ViewName, int LayerNumber, char (*LayerNam
 
 //=============================================================================================리스트뷰
 int OLED_Display::OLED_ListView(char* ViewName, char (*Text)[20], int set_Cursor, int list_size) {
-  char* OledTextList[list_size + 1];
-  for (int i = 0; i < 10; i++) {
+  int dume = 1;
+  if (list_size < 5) dume = 5;
+  char* OledTextList[list_size + dume];
+
+  for (int i = 0; i < 6; i++) OledTextList[i] = " ";
+
+  for (int i = 0; i < list_size; i++) {
     OledTextList[i] = Text[i];
   }
   OledTextList[list_size] = " -EXIT-";
@@ -166,45 +171,31 @@ int OLED_Display::OLED_ListView(char* ViewName, char (*Text)[20], int set_Cursor
     display.setCursor(0, 12);
     if (Cursor - n == 0) display.print(">");
     else display.print(" ");
-    display.print(n);
-    display.print(":");
     display.print(OledTextList[n + 0]);
 
     display.setCursor(0, 21);
     if (Cursor - n == 1) display.print(">");
     else display.print(" ");
-    display.print(n + 1);
-    display.print(":");
     display.print(OledTextList[n + 1]);
 
     display.setCursor(0, 30);
     if (Cursor - n == 2) display.print(">");
     else display.print(" ");
-    display.print(n + 2);
-    display.print(":");
     display.print(OledTextList[n + 2]);
 
     display.setCursor(0, 39);
     if (Cursor - n == 3) display.print(">");
     else display.print(" ");
-    display.print(n + 3);
-    display.print(":");
     display.print(OledTextList[n + 3]);
 
     display.setCursor(0, 48);
     if (Cursor - n == 4) display.print(">");
     else display.print(" ");
-    display.print(n + 4);
-    display.print(":");
     display.print(OledTextList[n + 4]);
 
     display.setCursor(0, 57);
     if (Cursor - n == 5) display.print(">");
     else display.print(" ");
-    if (n + 5 != 10) {
-      display.print(n + 5);
-      display.print(":");
-    }
     display.print(OledTextList[n + 5]);
 
     key_listner.PinReset();  //입력 인터페이스 값 초기화
@@ -360,12 +351,29 @@ char* OLED_Display::OLED_TextEditView() {
   }
 }
 
-
+//==============================================================
 void Key_Interface(int LayerNumber) {
   if (key_listner.Get_Button_1() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_1) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -386,8 +394,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_Button_2() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_2) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -408,8 +433,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_Button_3() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_3) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -430,8 +472,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_Button_4() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_4) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -452,8 +511,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_Button_5() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_5) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -474,8 +550,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_Button_6() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_6) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -499,8 +592,22 @@ void Key_Interface(int LayerNumber) {
 
   if (key_listner.Get_RotaryUp() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryUp) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
+          Keyboard.releaseAll();
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
+          Keyboard.releaseAll();
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
+          Keyboard.releaseAll();
           break;
         }
       case APP:
@@ -519,8 +626,22 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_RotaryDown() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryDown) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
+          Keyboard.releaseAll();
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
+          Keyboard.releaseAll();
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
+          Keyboard.releaseAll();
           break;
         }
       case APP:
@@ -539,8 +660,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_RotaryPush() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryPush) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -560,12 +698,29 @@ void Key_Interface(int LayerNumber) {
     }
   }
 
-    //========================================
+  //========================================
 
   if (key_listner.Get_WheelUp() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelUp) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -584,8 +739,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_WheelDown() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelDown) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:
@@ -604,8 +776,25 @@ void Key_Interface(int LayerNumber) {
   }
   if (key_listner.Get_WheelPush() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelPush) {
-      case KEYBOARD:
+      case NORMAL_KEY:
         {
+          Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SUB_YEY:
+        {
+          Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
+          Keyboard.releaseAll();
+          delay(300);
+          break;
+        }
+      case SPECIAL:
+        {
+          Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
+          Keyboard.releaseAll();
+          delay(300);
           break;
         }
       case APP:

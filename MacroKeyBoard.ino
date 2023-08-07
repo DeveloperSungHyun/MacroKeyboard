@@ -21,8 +21,8 @@ void setup() {
 
   key_data.EEPROM_DataLoad();
 
-  //   pinMode(LED_BUILTIN, OUTPUT);
-  // digitalWrite(LED_BUILTIN, LOW);
+    pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 
   oled_display.OLED_Display_Init();
   Serial.begin(115200);
@@ -65,7 +65,15 @@ void Scene_Main() {
 
 void Scene_LayerList() {
   int get_data = 0;
-  get_data = oled_display.OLED_ListView("Layer_List", LayerName_List, Layer_Number, 10);
+
+  char Layer_numberList[10][20];
+  char number[10][3] = {"0:", "1:", "2:", "3:", "4:", "5:", "6:", "7:", "8:", "9:"};
+  for(int i = 0; i < 10; i++){
+    strcpy(Layer_numberList[i], number[i]);
+    strcat(Layer_numberList[i], LayerName_List[i]);
+    
+  }
+  get_data = oled_display.OLED_ListView("Layer_List", Layer_numberList, Layer_Number, 10);
   if (get_data == -1 || get_data == 10) {
     OLED_SceneNumber = 0;
   } else {
@@ -143,6 +151,7 @@ void Scene_FunctionType(int Key_Number) {
     case 0:
       {
         //키보드
+        Scene_KeyBoardList_1(Key_Number);
         break;
       }
     case 1:
@@ -169,54 +178,104 @@ void Scene_NameSettingView() {
   char* text = oled_display.OLED_TextEditView();
   layer_data.LayerName = text;
 }
+
+char Key_SettingType[4][20] = { "Combination_Key", "Normal_Key", "Sub_Key", "special_Key" };
+void Scene_KeyBoardList_1(int Key_Number) {
+
+  int get_data = 0;
+  int get_key_value = 0;
+  int comkey = 0;
+  int KeyType;
+
+  while (true) {
+    get_data = oled_display.OLED_ListView("Setting", Key_SettingType, 0, 4);
+
+    switch (get_data) {
+      case 0:
+        {
+          comkey = oled_display.OLED_ListView("Setting", Combination_Key_display, 0, 16);
+          break;
+        }
+      case 1:
+        {
+          get_key_value = oled_display.OLED_ListView("Setting", Normal_Key_display, 0, 48);
+          KeyType = NORMAL_KEY;
+          break;
+        }
+      case 2:
+        {
+          get_key_value = oled_display.OLED_ListView("Setting", Sub_Key_display, 0, 15);
+          KeyType = SUB_YEY;
+          break;
+        }
+      case 3:
+        {
+          get_key_value = oled_display.OLED_ListView("Setting", special_Key_display, 0, 32);
+          KeyType = SPECIAL;
+          break;
+        }
+    }
+
+    if (get_data == -1) {
+      KeyData_Set(Key_Number, get_key_value, KeyType, comkey);
+      break;
+    }
+  }
+}
 void Scene_MediaDataList(int Key_Number) {
   int get_data = 0;
   get_data = oled_display.OLED_ListView("Setting", Media_display, 0, 8);
 
-  KeyData_Set(Key_Number, get_data, MEDIA);
+  KeyData_Set(Key_Number, get_data, MEDIA, 0);
 }
 void Scene_AppDataList(int Key_Number) {
   int get_data = 0;
   get_data = oled_display.OLED_ListView("Setting", App_display, 0, 4);
 
-  KeyData_Set(Key_Number, get_data, APP);
+  KeyData_Set(Key_Number, get_data, APP, 0);
 }
 
-void KeyData_Set(int Key_Number, int get_data, int Type) {
+void KeyData_Set(int Key_Number, int get_data, int Type, int ComKey) {
   switch (Key_Number) {
     case 1:
       {
         layer_data.KeyType_Button_1 = Type;
+        layer_data.ComKey_Button_1 = ComKey;
         layer_data.Button_1 = get_data;
         break;
       }
     case 2:
       {
         layer_data.KeyType_Button_2 = Type;
+        layer_data.ComKey_Button_2 = ComKey;
         layer_data.Button_2 = get_data;
         break;
       }
     case 3:
       {
         layer_data.KeyType_Button_3 = Type;
+        layer_data.ComKey_Button_3 = ComKey;
         layer_data.Button_3 = get_data;
         break;
       }
     case 4:
       {
         layer_data.KeyType_Button_4 = Type;
+        layer_data.ComKey_Button_4 = ComKey;
         layer_data.Button_4 = get_data;
         break;
       }
     case 5:
       {
         layer_data.KeyType_Button_5 = Type;
+        layer_data.ComKey_Button_5 = ComKey;
         layer_data.Button_5 = get_data;
         break;
       }
     case 6:
       {
         layer_data.KeyType_Button_6 = Type;
+        layer_data.ComKey_Button_6 = ComKey;
         layer_data.Button_6 = get_data;
         break;
       }
@@ -224,18 +283,21 @@ void KeyData_Set(int Key_Number, int get_data, int Type) {
     case 7:
       {
         layer_data.KeyType_RotaryUp = Type;
+        layer_data.ComKey_RotaryUp = ComKey;
         layer_data.RotaryUp = get_data;
         break;
       }
     case 8:
       {
         layer_data.KeyType_RotaryDown = Type;
+        layer_data.ComKey_RotaryDown = ComKey;
         layer_data.RotaryDown = get_data;
         break;
       }
     case 9:
       {
         layer_data.KeyType_RotaryPush = Type;
+        layer_data.ComKey_RotaryPush = ComKey;
         layer_data.RotaryPush = get_data;
         break;
       }
@@ -243,18 +305,21 @@ void KeyData_Set(int Key_Number, int get_data, int Type) {
     case 10:
       {
         layer_data.KeyType_WheelUp = Type;
+        layer_data.ComKey_WheelUp = ComKey;
         layer_data.WheelUp = get_data;
         break;
       }
     case 11:
       {
         layer_data.KeyType_WheelDown = Type;
+        layer_data.ComKey_WheelDown = ComKey;
         layer_data.WheelDown = get_data;
         break;
       }
     case 12:
       {
         layer_data.KeyType_WheelPush = Type;
+        layer_data.ComKey_WheelPush = ComKey;
         layer_data.WheelPush = get_data;
         break;
       }

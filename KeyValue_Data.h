@@ -1,6 +1,8 @@
-#define KEYBOARD 1
-#define APP 2
-#define MEDIA 3
+#define NORMAL_KEY 1
+#define SUB_YEY 2
+#define SPECIAL 3
+#define APP 4
+#define MEDIA 5
 
 //================================================================================================키보드 -> KEYBOARD
 int Combination_Key_Value[4] = {

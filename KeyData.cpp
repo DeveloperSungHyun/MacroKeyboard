@@ -33,90 +33,72 @@ void KeyData::EEPROM_DataSave() {
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_Button_1);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_Button_1[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_Button_1);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].Button_1);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_Button_2);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_Button_2[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_Button_2);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].Button_2);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_Button_3);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_Button_3[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_Button_3);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].Button_3);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_Button_4);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_Button_4[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_Button_4);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].Button_4);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_Button_5);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_Button_5[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_Button_5);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].Button_5);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_Button_6);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_Button_6[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_Button_6);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].Button_6);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_RotaryUp);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_RotaryUp[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_RotaryUp);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].RotaryUp);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_RotaryDown);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_RotaryDown[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_RotaryDown);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].RotaryDown);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_RotaryPush);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_RotaryPush[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_RotaryPush);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].RotaryPush);
     address += sizeof(char);
     //===================================================================
@@ -125,30 +107,24 @@ void KeyData::EEPROM_DataSave() {
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_WheelUp);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_WheelUp[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_WheelUp);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].WheelUp);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_WheelDown);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_WheelDown[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_WheelDown);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].WheelDown);
     address += sizeof(char);
     //===================================================================
 
     EEPROM.writeChar(address, (char)layer_data_list[i].KeyType_WheelPush);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      EEPROM.writeBool(address, layer_data_list[i].ComKey_WheelPush[b]);
-      address += sizeof(bool);
-    }
+    EEPROM.writeChar(address, layer_data_list[i].ComKey_WheelPush);
+    address += sizeof(char);
     EEPROM.writeChar(address, (char)layer_data_list[i].WheelPush);
     address += sizeof(char);
   }
@@ -168,120 +144,96 @@ void KeyData::EEPROM_DataLoad() {
 
     layer_data_list[i].KeyType_Button_1 = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_Button_1[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_Button_1 = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].Button_1 = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_Button_2 = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_Button_2[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_Button_2 = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].Button_2 = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_Button_3 = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_Button_3[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_Button_3 = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].Button_3 = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_Button_4 = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_Button_4[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_Button_4 = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].Button_4 = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_Button_5 = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_Button_5[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_Button_5 = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].Button_5 = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_Button_6 = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_Button_6[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_Button_6 = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].Button_6 = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_RotaryUp = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_RotaryUp[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_RotaryUp = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].RotaryUp = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_RotaryDown = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_RotaryDown[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_RotaryDown = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].RotaryDown = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_RotaryPush = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_RotaryPush[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_RotaryPush = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].RotaryPush = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_WheelUp = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_WheelUp[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_WheelUp = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].WheelUp = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_WheelDown = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_WheelDown[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_WheelDown = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].WheelDown = EEPROM.readChar(address);
     address += sizeof(char);
     //===================================================================
 
     layer_data_list[i].KeyType_WheelPush = EEPROM.readChar(address);
     address += sizeof(char);
-    for (int b = 0; b < 4; b++) {
-      layer_data_list[i].ComKey_WheelPush[b] = EEPROM.readBool(address);
-      address += sizeof(bool);
-    }
+    layer_data_list[i].ComKey_WheelPush = EEPROM.readBool(address);
+    address += sizeof(char);
     layer_data_list[i].WheelPush = EEPROM.readChar(address);
     address += sizeof(char);
   }
