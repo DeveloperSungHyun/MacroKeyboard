@@ -357,6 +357,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_1) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_1][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           Keyboard.releaseAll();
           delay(300);
@@ -364,6 +365,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_1][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           Keyboard.releaseAll();
           delay(300);
@@ -371,6 +373,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_1][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           Keyboard.releaseAll();
           delay(300);
@@ -396,6 +399,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_2) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_2][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           Keyboard.releaseAll();
           delay(300);
@@ -403,6 +407,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_2][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           Keyboard.releaseAll();
           delay(300);
@@ -410,6 +415,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_2][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           Keyboard.releaseAll();
           delay(300);
@@ -435,6 +441,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_3) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_3][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           Keyboard.releaseAll();
           delay(300);
@@ -442,6 +449,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_3][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           Keyboard.releaseAll();
           delay(300);
@@ -449,6 +457,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_3][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           Keyboard.releaseAll();
           delay(300);
@@ -474,6 +483,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_4) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_4][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           Keyboard.releaseAll();
           delay(300);
@@ -481,6 +491,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_4][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           Keyboard.releaseAll();
           delay(300);
@@ -488,6 +499,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_4][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           Keyboard.releaseAll();
           delay(300);
@@ -513,6 +525,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_5) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_5][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           Keyboard.releaseAll();
           delay(300);
@@ -520,6 +533,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_5][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           Keyboard.releaseAll();
           delay(300);
@@ -527,6 +541,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_5][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           Keyboard.releaseAll();
           delay(300);
@@ -552,6 +567,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_6) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_6][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           Keyboard.releaseAll();
           delay(300);
@@ -559,6 +575,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_6][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           Keyboard.releaseAll();
           delay(300);
@@ -566,6 +583,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_6][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           Keyboard.releaseAll();
           delay(300);
@@ -594,18 +612,21 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryUp) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryUp][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
           Keyboard.releaseAll();
           break;
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryUp][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
           Keyboard.releaseAll();
           break;
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryUp][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryUp]);
           Keyboard.releaseAll();
           break;
@@ -628,18 +649,21 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryDown) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryDown][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
           Keyboard.releaseAll();
           break;
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryDown][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
           Keyboard.releaseAll();
           break;
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryDown][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryDown]);
           Keyboard.releaseAll();
           break;
@@ -662,6 +686,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_RotaryPush) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryPush][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           Keyboard.releaseAll();
           delay(300);
@@ -669,6 +694,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryPush][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           Keyboard.releaseAll();
           delay(300);
@@ -676,6 +702,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryPush][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           Keyboard.releaseAll();
           delay(300);
@@ -704,6 +731,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelUp) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelUp][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
           Keyboard.releaseAll();
           delay(300);
@@ -711,6 +739,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelUp][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
           Keyboard.releaseAll();
           delay(300);
@@ -718,6 +747,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelUp][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
           Keyboard.releaseAll();
           delay(300);
@@ -741,6 +771,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelDown) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelDown][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
           Keyboard.releaseAll();
           delay(300);
@@ -748,6 +779,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelDown][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
           Keyboard.releaseAll();
           delay(300);
@@ -755,6 +787,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelDown][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
           Keyboard.releaseAll();
           delay(300);
@@ -778,6 +811,7 @@ void Key_Interface(int LayerNumber) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelPush) {
       case NORMAL_KEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelPush][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           Keyboard.releaseAll();
           delay(300);
@@ -785,6 +819,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SUB_YEY:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelPush][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           Keyboard.releaseAll();
           delay(300);
@@ -792,6 +827,7 @@ void Key_Interface(int LayerNumber) {
         }
       case SPECIAL:
         {
+          for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelPush][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           Keyboard.releaseAll();
           delay(300);
