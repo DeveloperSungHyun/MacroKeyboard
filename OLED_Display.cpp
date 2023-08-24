@@ -29,7 +29,7 @@ KeyListner key_listner;
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void OLED_Display::OLED_Display_Init() {
-  key_listner.ControllerKeyInit(35, 36, 37, 38, 39, 40, 6, 5, 4, 10, 11, 12, 17);
+  key_listner.ControllerKeyInit(5, 6, 7, 16, 17, 18, 10, 11, 12, 42, 40, 41, 36);
 
   USB.begin();
 
