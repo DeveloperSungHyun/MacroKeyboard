@@ -360,7 +360,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_1][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -368,7 +367,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_1][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -376,24 +374,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_1][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_1]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_Button_2() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_2) {
@@ -402,7 +398,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_2][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -410,7 +405,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_2][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -418,24 +412,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_2][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_2]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_Button_3() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_3) {
@@ -444,7 +436,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_3][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -452,7 +443,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_3][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -460,24 +450,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_3][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_3]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_Button_4() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_4) {
@@ -486,7 +474,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_4][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -494,7 +481,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_4][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -502,24 +488,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_4][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_4]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_Button_5() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_5) {
@@ -528,7 +512,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_5][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -536,7 +519,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_5][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -544,24 +526,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_5][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_5]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_Button_6() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_Button_6) {
@@ -570,7 +550,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_6][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -578,7 +557,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_6][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -586,24 +564,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_Button_6][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).Button_6]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
 
   //========================================
@@ -689,7 +665,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryPush][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -697,7 +672,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryPush][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -705,24 +679,22 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_RotaryPush][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).RotaryPush]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
 
   //========================================
@@ -734,7 +706,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelUp][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -742,7 +713,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelUp][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -750,7 +720,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelUp][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelUp]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
@@ -766,6 +735,7 @@ void Key_Interface(int LayerNumber) {
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_WheelDown() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelDown) {
@@ -774,7 +744,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelDown][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -782,7 +751,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelDown][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -790,7 +758,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelDown][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelDown]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
@@ -806,6 +773,7 @@ void Key_Interface(int LayerNumber) {
           break;
         }
     }
+    delay(300);
   }
   if (key_listner.Get_WheelPush() == true) {
     switch (key_data1.Get_KeyData(LayerNumber).KeyType_WheelPush) {
@@ -814,7 +782,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelPush][i]);
           Keyboard.press(Normal_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SUB_YEY:
@@ -822,7 +789,6 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelPush][i]);
           Keyboard.press(Sub_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case SPECIAL:
@@ -830,23 +796,21 @@ void Key_Interface(int LayerNumber) {
           for(int i = 0; i < 4; i++) Keyboard.press(Combination_Key_Value[key_data1.Get_KeyData(LayerNumber).ComKey_WheelPush][i]);
           Keyboard.press(special_Key_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           Keyboard.releaseAll();
-          delay(300);
           break;
         }
       case APP:
         {
           ConsumerControl.press(App_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
       case MEDIA:
         {
           ConsumerControl.press(Media_Value[key_data1.Get_KeyData(LayerNumber).WheelPush]);
           ConsumerControl.release();
-          delay(300);
           break;
         }
     }
+    delay(300);
   }
 }

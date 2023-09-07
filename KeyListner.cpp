@@ -77,22 +77,22 @@ void RotaryInterrupt() {
 
 
 bool KeyListner::Get_Button_1() {
-  return digitalRead(Pin_Button_1);
+  return !digitalRead(Pin_Button_1);
 }
 bool KeyListner::Get_Button_2() {
-  return digitalRead(Pin_Button_2);
+  return !digitalRead(Pin_Button_2);
 }
 bool KeyListner::Get_Button_3() {
-  return digitalRead(Pin_Button_3);
+  return !digitalRead(Pin_Button_3);
 }
 bool KeyListner::Get_Button_4() {
-  return digitalRead(Pin_Button_4);
+  return !digitalRead(Pin_Button_4);
 }
 bool KeyListner::Get_Button_5() {
-  return digitalRead(Pin_Button_5);
+  return !digitalRead(Pin_Button_5);
 }
 bool KeyListner::Get_Button_6() {
-  return digitalRead(Pin_Button_6);
+  return !digitalRead(Pin_Button_6);
 }
 
 bool KeyListner::Get_RotaryUp() {
@@ -102,21 +102,21 @@ bool KeyListner::Get_RotaryDown() {
   return RotaryDown;
 }
 bool KeyListner::Get_RotaryPush() {
-  return digitalRead(Pin_Rotary_C);
+  return !digitalRead(Pin_Rotary_C);
 }
 
 bool KeyListner::Get_WheelUp() {
-  return digitalRead(Pin_Wheel_A);
+  return !digitalRead(Pin_Wheel_A);
 }
 bool KeyListner::Get_WheelDown() {
-  return digitalRead(Pin_Wheel_B);
+  return !digitalRead(Pin_Wheel_B);
 }
 bool KeyListner::Get_WheelPush() {
-  return digitalRead(Pin_Wheel_C);
+  return !digitalRead(Pin_Wheel_C);
 }
 
 bool KeyListner::Get_SettingButton() {
-  return digitalRead(Pin_SettingButton);
+  return !digitalRead(Pin_SettingButton);
 }
 
 void KeyListner::PinReset(){
